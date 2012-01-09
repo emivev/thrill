@@ -19,7 +19,7 @@ has_many :reviews, :dependent => :destroy
  
  accepts_nested_attributes_for :lessons, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
  
- accepts_nested_attributes_for :reviews, :reject_if => lambda { |a| a[:name].blank? }, :allow_destroy => true
+ 
 
 scope :with_category, lambda { |categories|
     categories.present? ? where(:category_ids => categories) : scoped }
