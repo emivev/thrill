@@ -1,0 +1,83 @@
+
+<div class="div-title">
+  <h3><%= link_to "Travel destinations for awesome vacations", about_path %></h3>
+</div>
+
+<div class="mid">
+ 
+<h5> Select </h5>
+<div class="sidebar">               
+  
+        <form class="filter_form">
+           <%= form_for @search do |f| %>
+             <%= f.collection_select :categories_id_equals, Category.all, :id, :name, :include_blank => true, :prompt => "All categories" %>
+             <%= f.collection_select :location_id_equals, Location.all, :id, :name, :include_blank => true, :prompt => "All locations" %>
+             <%= f.collection_select :types_id_equals, Type.all, :id, :name, :include_blank => true, :prompt => "Listing Type" %>   
+           <%= submit_tag "Find Now", :class => "find" %>
+           <% end %>
+        </form>   
+ 
+ 
+  <% if signed_in? %>   
+   <%= link_to 'New Trip', new_trip_path %>
+   <% end %>
+          
+</div>
+
+<div class="main">
+
+<div class="sort">
+    Sort by <%= sort_link @search, :price %> <i>(starting from / price per person)</i>
+</div>  
+
+<div class="paginator1">
+ 
+ <%= page_entries_info @trips, :model => '' %>
+
+
+</div>
+
+
+<% for trip in @trips %>
+
+<div class="trip">
+  <h2><%= link_to trip.title, trip %> </h2>
+  <h3><%= trip.location %> </h3>
+  <h4><%= trip.categories.map(&:name).to_sentence %> * <%= trip.types.map(&:name).to_sentence %> </h4> 
+   
+  <p>
+   <% thumb_url = trip.thumb_nail_url %>
+   <% if thumb_url %>
+   <%=  image_tag thumb_url %>
+   <% end %>
+ </p>
+  
+
+<div class="price">
+  
+  <h5>  <%= trip.price %> </h5> 
+  <p>/week </p>
+  
+</div>
+
+  
+<ul>   
+    <li><% if signed_in? %> <%= button_to "delete", trip, :method=>:delete, :class=>:destroy %> <% end %> <li>
+    <li> <%= link_to "Check it Out", trip, :class => "check_button" %> </li>
+</ul>   
+  
+ 
+<div style="clear:both;"></div>
+</div>  
+<% end %>
+
+<br></br>
+
+<div class="paginator2">
+    
+   <%= will_paginate %>
+  
+</div>
+
+</div>
+</div>

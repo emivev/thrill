@@ -1,0 +1,168 @@
+<%= form_for @trip, :html => { :multipart => true } do |f| %>
+  
+  
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  
+ <div class="field">
+    <%= f.label :location_id %><br />
+    <%= f.collection_select :location_id, Location.all, :id, :name %>
+  </div>
+  
+  <div class="field">
+   <% Category.all.each do |category| %>
+     <%= check_box_tag "trip[category_ids][]", category.id, @trip.category_ids.include?(category.id) %>
+     <%= category.name %>
+    <% end %>
+  </div>
+  
+  <div class="field">
+   <% Type.all.each do |type| %>
+     <%= check_box_tag "trip[type_ids][]", type.id, @trip.type_ids.include?(type.id) %>
+     <%= type.name %>
+    <% end %>
+  </div>
+  
+  
+  <div class="field">
+   <h5> Details & amneties </h5>
+   <% Detail.all.each do |detail| %>
+     <%= check_box_tag "trip[detail_ids][]", detail.id, @trip.detail_ids.include?(detail.id) %>
+     <%= detail.name %>
+    <% end %>
+  </div>
+  
+   <div class="acc">
+  
+   <h2>Accomodations</h2>
+  <%= f.fields_for :accomodations, :accomodations do |accomodation_fields| %>
+
+  <div class="field">
+    <%= accomodation_fields.label :accomodation_name %><br />
+    <%= accomodation_fields.text_field :name %>
+    <%= accomodation_fields.check_box :_destroy %>
+    <%= accomodation_fields.label :_destroy, "Remove" %>
+  </div>
+  <div class="field">
+    <%= accomodation_fields.label :description %><br />
+    <%= accomodation_fields.text_area :description %>
+  </div>
+  <div class="field">
+     <%= accomodation_fields.label :price1 %><br />
+    <%= accomodation_fields.text_field :price1 %>
+  </div>
+  <div class="field">
+   <%= accomodation_fields.label :price2 %><br />
+    <%= accomodation_fields.text_field :price2 %>
+  </div>
+  <div class="field">
+    <%= accomodation_fields.label :price3 %><br />
+    <%= accomodation_fields.text_field :price3 %>
+  </div>
+ 
+<% end %>
+    </div>
+  
+  
+   <div class="acc">
+  
+   <h2>Lessons</h2>
+  <%= f.fields_for :lessons, :lessons do |lesson_fields| %>
+
+  <div class="field">
+    <%= lesson_fields.label :lesson_name %><br />
+    <%= lesson_fields.text_field :name %>
+    <%= lesson_fields.check_box :_destroy %>
+    <%= lesson_fields.label :_destroy, "Remove" %>
+  </div>
+  
+  <div class="field">
+    <%= lesson_fields.label :description %><br />
+    <%= lesson_fields.text_area :description %>
+  </div>
+  
+  
+  <div class="field">
+     <%= lesson_fields.label :price1 %><br />
+    <%= lesson_fields.text_field :price1 %>
+  </div>
+  <div class="field">
+   <%= lesson_fields.label :price2 %><br />
+    <%= lesson_fields.text_field :price2 %>
+  </div>
+  <div class="field">
+    <%= lesson_fields.label :price3 %><br />
+    <%= lesson_fields.text_field :price3 %>
+  </div>
+ 
+<% end %>
+    </div>
+  
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  
+  <h4>New Files</h4>
+  
+  <%= f.fields_for :images do |image_fields| %>
+ 
+  <% if image_fields.object.new_record? %>
+ 
+  <p>
+  <%= image_fields.file_field :image %>
+  
+  <% end %> 
+
+<% end %>
+   
+  <h4>Old Files</h4>
+    
+  <%= f.fields_for :images do |image_fields| %>
+  
+  <% unless image_fields.object.new_record? %>
+  
+     <p>
+     <%= link_to image_tag(image_fields.object.image.url(:thumb)), image_fields.object.image.url(:original) %>
+      <%= image_fields.label :title, "Image Title" %>
+<%= image_fields.text_field :title %>
+     <%= image_fields.check_box :_destroy %>
+     </p>
+   <% end %>
+  
+  <% end %>
+  
+  
+  <div class="acc">
+  
+   <h2>Reviews</h2>
+  <%= f.fields_for :reviews, :reviews do |review_fields| %>
+
+<div class="field">
+    <%= review_fields.label :content %><br />
+    <%= review_fields.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= review_fields.label :review_name %><br />
+    <%= review_fields.text_field :name %>
+    <%= review_fields.check_box :_destroy %>
+    <%= review_fields.label :_destroy, "Remove" %>
+  </div>
+  
+ 
+<% end %>
+    </div>
+  
+  
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

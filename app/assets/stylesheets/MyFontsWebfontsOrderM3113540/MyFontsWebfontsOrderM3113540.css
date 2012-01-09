@@ -1,0 +1,36 @@
+/*
+@license
+ * MyFonts Webfont Build ID 951134, 2011-08-17T05:45:15-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Insolent Italic
+ * URL:http://new.myfonts.com/fonts/haiku/insolent/italic/
+ * Foundry: Haiku Monkey
+ * Copyright: Copyright (c) 2009 by Alec Julien. All rights reserved.
+ * License: http://www.myfonts.com/viewlicense?1056
+ * Licensed pageviews: unlimited/month
+ * CSS font-family: Insolent-Italic
+ * CSS font-weight: normal
+ * CSS font-style: normal
+ * 
+ * Webfont: Insolent
+ * URL:http://new.myfonts.com/fonts/haiku/insolent/regular/
+ * Foundry: Haiku Monkey
+ * Copyright: Copyright (c) 2009 by Alec Julien. All rights reserved.
+ * License: http://www.myfonts.com/viewlicense?1056
+ * Licensed pageviews: unlimited/month
+ * CSS font-family: Insolent
+ * CSS font-weight: normal
+ * CSS font-style: normal
+ * 
+ * (c) 2011 Bitstream Inc
+*/
+
+
+ @font-face {font-family: 'Insolent-Italic';src: url('webfonts/eot/style_173184.eot');src: url('webfonts/eot/style_173184.eot?#iefix') format('embedded-opentype'),url('webfonts/woff/style_173184.woff') format('woff'),url('webfonts/ttf/style_173184.ttf') format('truetype'),url('webfonts/svg/style_173184.svg#Insolent-Italic') format('svg');}
+ @font-face {font-family: 'Insolent';src: url('webfonts/eot/style_173185.eot');src: url('webfonts/eot/style_173185.eot?#iefix') format('embedded-opentype'),url('webfonts/woff/style_173185.woff') format('woff'),url('webfonts/ttf/style_173185.ttf') format('truetype'),url('webfonts/svg/style_173185.svg#Insolent') format('svg');}

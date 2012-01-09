@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @package.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @package.description %>
+</p>
+
+<p>
+  <b>Price1:</b>
+  <%= @package.price1 %>
+</p>
+
+<p>
+  <b>Price2:</b>
+  <%= @package.price2 %>
+</p>
+
+<p>
+  <b>Price3:</b>
+  <%= @package.price3 %>
+</p>
+
+<p>
+  <b>Price4:</b>
+  <%= @package.price4 %>
+</p>
+
+<p>
+  <b>Price5:</b>
+  <%= @package.price5 %>
+</p>
+
+
+<%= link_to 'Edit', edit_package_path(@package) %> |
+<%= link_to 'Back', packages_path %>

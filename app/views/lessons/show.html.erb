@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @lesson.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <b>Price1:</b>
+  <%= @lesson.price1 %>
+</p>
+
+<p>
+  <b>Price2:</b>
+  <%= @lesson.price2 %>
+</p>
+
+<p>
+  <b>Price3:</b>
+  <%= @lesson.price3 %>
+</p>
+
+<p>
+  <b>Price4:</b>
+  <%= @lesson.price4 %>
+</p>
+
+<p>
+  <b>Price5:</b>
+  <%= @lesson.price5 %>
+</p>
+
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>

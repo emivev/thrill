@@ -1,0 +1,8 @@
+<h1>
+  <%= @user.name %>
+   <% if current_user.admin? %>
+  | <%= link_to "delete", user, :method => :delete, :confirm => "You sure?",
+                                :title => "Delete #{user.name}" %>
+  <% end %>
+  <%= link_to "New Trip", newtrip_path, :class => "signup_button round" %>
+</h1>

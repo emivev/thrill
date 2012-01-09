@@ -1,0 +1,183 @@
+<div class="tripshow">
+
+  <%= link_to '<<< Back', trips_path %> 
+
+<ul class="share">
+<li> <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-send="true" data-layout="button_count" data-width="20" data-show-faces="false" data-action="recommend" data-font="lucida grande"></div> </li>
+
+</ul>
+
+  <p id="notice"><%= notice %></p>
+   <h1> <%= @trip.title %> </h1>
+   <p>
+     Located in <b><%= @trip.location %> | </b>
+     Sports:
+     
+     <%= @trip.categories.map(&:name).to_sentence %> 
+   
+  
+ - <%= link_to "Read Reviews", '#inline',  :id => 'various1', :class => 'review' %> 
+   </p>
+  
+  
+  <div style='display:none'>  
+   <div id="inline">
+     <% for review in @trip.reviews %> 
+  
+    <ul>
+    <li> <%= review.content %> </li>
+    <li> <i> <%= review.name %> </i> </li>
+    </ul>
+   
+     <% end %>  
+    </div> 
+  </div>
+
+  <div class="gallery"> 
+    <% for image in @trip.images %>	
+	<%= link_to image_tag(image.image.url(:thumb)), image.image.url(:large), :title => image.title, :rel => "iframe" %>
+	<% end %>   
+  </div> 	
+  <br></br>
+
+
+
+<h3>Brief Description:</h3>
+ <br></br>
+<p>
+ 
+  <%= @trip.description %>
+</p>	
+	
+<h3>Pricing:</h3>
+ <br></br> 
+ 
+<div class="pricing">
+
+
+<h4> ACCOMMODATION/PACKAGE </h4>
+<table id="accomodation">
+
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Price</th>
+</tr> 
+
+<% for accomodation in @trip.accomodations %>
+<tr>
+<td> <%= accomodation.name %> </td>
+<td> <%= accomodation.description %> </td>
+<td>     <%= accomodation.price1 %> </br> <%= accomodation.price2 %> </br> <%= accomodation.price3 %> </td>
+
+</tr>
+
+<% end %>
+</table>
+
+
+ 
+<h4> EXTRAS </h4>
+<table id="extras">
+<tr>
+<th>Type</th>
+<th>Price</th>
+</tr>
+<% for lesson in @trip.lessons %>
+<tr>
+<td> <%= lesson.name %> </td>
+<td> <%= lesson.description %>  </td>
+</tr>
+<% end %>
+</table>
+
+
+</div>
+
+
+
+ <br></br>
+<h3>Details:</h3> 
+ <br></br>
+  
+  <ul>
+  <% @trip.details.each do |detail| %> 
+  <li><%=detail.name %> </li>
+  <% end %>
+  </ul>
+
+
+
+
+
+<% if signed_in? %>
+
+<%= link_to 'Edit', edit_trip_path(@trip) %>
+
+<% end %>
+
+<a href="#" data-reveal-id="myModal" data-animation="fade" class="book_button">  BOOK IT </a>
+
+</div>
+
+</div>
+
+<div id="myModal" class="reveal-modal">
+     <h1> This is Super Awesome ! </h1>
+
+<p> But I hate to inform you that Thrill Engine is not in the shape to give full customer service that you deserve at the moment </p>
+
+<p> You can sign up for beta invates for more updgraded version </p>
+
+<!-- Begin MailChimp Signup Form -->
+
+ <div id="mc_embed_signup">
+   <form action="http://thrillengine.us4.list-manage.com/subscribe/post?u=b00a6ce905026bcb1bfd68811&amp;id=ffa803ed98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+	
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address here" required>
+	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <p>Spam Sucks!</p>
+   </form>
+ </div>
+<!--End mc_embed_signup-->
+
+<p> Or You can arm yourself with a little bit of patience and book it anyway </p>
+
+<b>Just give your: </b>     
+<ul>
+  <li>your name ; </li>
+  <li>what type of accomodation ; </li>
+  <li>when you arrive ; </li>
+  <li> number of persons ; </li>
+  <li> your ability level. </li>
+ </ul> 
+  
+Directly to <%= mail_to "booking@thrillengine.com", "booking@thrillengine.com",
+         :subject => @trip.title %>
+
+<p> *Since we are testing out, some important details for you might be left out, please do not hesitate to ask questions, or inform us what info we need to provide.Thanks!* </p>     
+    
+
+
+ </div>
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+
