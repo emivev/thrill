@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(:version => 20111229184403) do
   end
 
   create_table "reviews", :force => true do |t|
-    t.string   "trip_id"
+    t.integer  "trip_id"
     t.text     "content"
     t.string   "name"
     t.datetime "created_at"
