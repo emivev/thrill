@@ -45,7 +45,7 @@ header img {
 
 .content {
 	
-	
+border-bottom-style
 	
 	
 	
@@ -177,6 +177,8 @@ footer nav ul li a:hover {
 	
 	
 	 -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15); box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	
+	
 	
 }
 
@@ -416,7 +418,7 @@ option {
   
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15); box-shadow: 0 1px 2px rgba(0,0,0,.15);
   
- border-top: 5px solid #808080;
+ border-top: 10px solid #808080;
 	
   
 }
@@ -535,6 +537,23 @@ a.check_button {
   
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15); box-shadow: 0 1px 2px rgba(0,0,0,.15);
   
+}
+
+.button {
+	
+	cursor:pointer;	
+   border: none;
+   padding: 5px 30px;
+   border-radius: 0px;
+   
+   width: 200px;	
+	color: #fff;
+	font-weight: bold; 
+	
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15); box-shadow: 0 1px 2px rgba(0,0,0,.15);
+	
+	
+	
 }
 
 .find {
@@ -771,6 +790,19 @@ a.back_button:hover {
 	font-size:18px; 
 	
 }
+
+
+#mc_embed_signup {
+	
+    
+	border-bottom: solid 1px #c0c0c0;
+	padding: 5px;
+
+
+	
+}
+
+
 
 @font-face {
     font-family: 'PacificoRegular';

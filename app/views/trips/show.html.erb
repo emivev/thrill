@@ -23,7 +23,7 @@
      
      <%= @trip.categories.map(&:name).to_sentence %> 
    
-  
+     
  - <%= link_to "Read Reviews", '#inline',  :id => 'various1', :class => 'review' %> 
    </p>
   
@@ -131,42 +131,68 @@
 </div>
 
 <div id="myModal" class="reveal-modal">
-     <h1> This is Super Awesome ! </h1>
+     <h1> ALRIGHT! </h1>
 
-<p> But I hate to inform you that Thrill Engine is not in the shape to give full customer service that you deserve at the moment </p>
+<h2> But Thrill Engine is not quite in the shape to give a full service yet - <%= link_to "read more", about_path %>.
+You can Sign up for beta invites for more updgraded version.  </h2>
 
-<p> You can sign up for beta invates for more updgraded version </p>
+
 
 <!-- Begin MailChimp Signup Form -->
 
  <div id="mc_embed_signup">
+   
    <form action="http://thrillengine.us4.list-manage.com/subscribe/post?u=b00a6ce905026bcb1bfd68811&amp;id=ffa803ed98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
 	
 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address here" required>
-	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    <p>Spam Sucks!</p>
+	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="listed"></div>  
    </form>
  </div>
+  
 <!--End mc_embed_signup-->
 
-<p> Or You can arm yourself with a little bit of patience and book it anyway </p>
+<br></br>
 
-<b>Just give your: </b>     
-<ul>
-  <li>your name ; </li>
-  <li>what type of accomodation ; </li>
-  <li>when you arrive ; </li>
-  <li> number of persons ; </li>
-  <li> your ability level. </li>
- </ul> 
+
+
+<h3> Meanwhile - you can still make the booking at the owners website   
+
+<%= link_to(@trip.url) do %>
+  <strong>Owners website</strong>  </h3>
+<% end %> 
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
   
-Directly to <%= mail_to "booking@thrillengine.com", "booking@thrillengine.com",
-         :subject => @trip.title %>
-
-<p> *Since we are testing out, some important details for you might be left out, please do not hesitate to ask questions, or inform us what info we need to provide.Thanks!* </p>     
+ 
+ <br></br> 
+<p> *Don't forget to follow for news and updates and leave a feedback - Thanks!* </p>     
     
-
-
+    <div style="float:left;width:100px;margin-left:40px; ">
+       <%= mail_to "feedback@thrillengine.com", "feedback@thrillengine.com" %>
+     
+    </div>
+     
+    <div style="float:left;width:100px; margin-left:90px;">
+           <div class="fb-like" data-href="http://www.facebook.com/pages/Thrill-Engine/199223676806364" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+        
+    </div>       
+        
+        <div style="float:left;width:100px;">
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+         <a href="https://twitter.com/theThrillEngine" class="twitter-follow-button" data-show-count="false">Follow @theThrillEngine</a> 
+          
+        </div>  
+        
+    </ul>
  </div>
 </div>
 

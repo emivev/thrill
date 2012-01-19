@@ -10,7 +10,7 @@ has_many :accomodations, :dependent => :destroy
 has_many :lessons, :dependent => :destroy
 has_many :reviews, :dependent => :destroy
 
- attr_accessible :title, :description, :images_attributes, :price, :location_id, :category_ids, :type_ids, :detail_ids, :accomodations_attributes, :lessons_attributes, :reviews_attributes
+ attr_accessible :title, :description, :images_attributes, :price, :url, :location_id, :category_ids, :type_ids, :detail_ids, :accomodations_attributes, :lessons_attributes, :reviews_attributes
  has_many :images
     
  accepts_nested_attributes_for :images, :allow_destroy => true

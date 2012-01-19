@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111229184403) do
+ActiveRecord::Schema.define(:version => 20120119174446) do
 
   create_table "accomodations", :force => true do |t|
     t.integer  "trip_id"
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(:version => 20111229184403) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "country"
   end
 
   create_table "packages", :force => true do |t|
@@ -114,6 +115,7 @@ ActiveRecord::Schema.define(:version => 20111229184403) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "location_id"
+    t.string   "url"
   end
 
   create_table "trips_types", :id => false, :force => true do |t|

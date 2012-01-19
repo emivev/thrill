@@ -1,3 +1,4 @@
+<% if signed_in? %>
 <h1>Listing categories</h1>
 
 <table>
@@ -20,3 +21,4 @@
 <br />
 
 <%= link_to 'New Category', new_category_path %>
+<% end %>

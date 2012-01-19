@@ -11,7 +11,7 @@
         <form class="filter_form">
            <%= form_for @search do |f| %>
              <%= f.collection_select :categories_id_equals, Category.all, :id, :name, :include_blank => true, :prompt => "All categories" %>
-             <%= f.collection_select :location_id_equals, Location.all, :id, :name, :include_blank => true, :prompt => "All locations" %>
+             <%= f.collection_select :location_id_equals, Location.order('country ASC').all, :id, :name, :include_blank => true, :prompt => "All locations" %>
              <%= f.collection_select :types_id_equals, Type.all, :id, :name, :include_blank => true, :prompt => "Listing Type" %>   
            <%= submit_tag "Find Now", :class => "find" %>
            <% end %>
