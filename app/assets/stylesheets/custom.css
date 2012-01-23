@@ -706,7 +706,7 @@ a.back_button:hover {
 	
 	border-bottom:solid 1px #ffffff;
 	background:	#f7f7f7;
-	
+	min-width:120px;
 }
 
 
