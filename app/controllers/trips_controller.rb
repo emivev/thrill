@@ -15,7 +15,8 @@ class TripsController < ApplicationController
   # GET /trips/1.json
   def show
     @trip = Trip.find(params[:id])
-    
+    @meta_title = " Thrill Engine | #{@trip.categories.map(&:name).to_sentence} | #{@trip.title} - "
+    @meta_description = @trip.description
     
 
     respond_to do |format|

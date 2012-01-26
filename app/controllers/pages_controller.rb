@@ -1,10 +1,8 @@
 class PagesController < ApplicationController
-  def home
-    @title = "Home"
-  end
+  
 
   def about
-    @title = "About"
+    @meta_title = "Thrill Engine | About"
   end
 
 end
