@@ -5,6 +5,7 @@ class TripsController < ApplicationController
     @search = Trip.search(params[:search])  
     
     @trips = @search.paginate(:page => params[:page], :per_page => 7)
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @trips }
