@@ -150,11 +150,13 @@ div.div-title h3 {
 	padding: 0 10px; 
 	-webkit-font-smoothing: antialiased; 
 	line-height: 40px; 
+	
 }
 
 div.div-title a {
     color: #fff;
-    text-shadow: 0px 0px #000, 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000;
+    text-shadow: 0px 1px 0px #000, 0px 2px 0px #000, 0px 3px 0px #000, 0px 4px 0px #000, 0px 5px 0px #000, 0px 6px 0px #000, 0px 7px 0px #333, 0px 8px 7px #001135;
+
 }
 
 div.div-title a:hover {
@@ -848,6 +850,15 @@ a.back_button:hover {
 	text-shadow: #000 0px 1px 0px;
 	
 }
+
+
+.fb-like {
+	
+	top: -23px; 
+	left: 630px;
+	
+}
+
 
 @font-face {
     font-family: 'PacificoRegular';
