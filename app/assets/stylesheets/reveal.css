@@ -28,7 +28,7 @@
 		-moz-border-radius: 1px;
 		-webkit-border-radius: 1px;
 		border-radius: 1px;
-		border: solid 5px #efefef;
+		border: solid 5px #808080;
 		
 		}
 		
@@ -50,13 +50,13 @@
 		} 
 		
 	.reveal-modal h1{
-		font: 42px;
-		font-family: Insolent-Italic, sans-serif;
+		font-size: 18px;
+		font-family: Verdana,serif;
 		font-weight:bold;
-		color:#fff;
+		color:#000;
 		
 		
-		text-shadow: 0px 0px #000, 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000;
+		
 		-webkit-font-smoothing: none;
 -webkit-font-smoothing: subpixel-antialiased;
 -webkit-font-smoothing: antialiased;
@@ -70,8 +70,9 @@
 	}
 	
 	 .reveal-modal h3 {
-		font-size:12px;
-		color:#000;
+		font-size:16px;
+		color:#808080;
+		font-weight:bold;
 		
 	}
 	 

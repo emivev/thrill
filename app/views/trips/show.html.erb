@@ -134,10 +134,11 @@
 </div>
 
 <div id="myModal" class="reveal-modal">
-     <h1> ALRIGHT! </h1>
+     
+<h1> Hello! Thrill Engine is not ready yet. </h1>
 
-<h2> But Thrill Engine is not quite in the shape to give a full service yet - <%= link_to "read more", about_path %>.
-You can Sign up for beta invites for more updgraded version.  </h2>
+<h3> Working hard to put all things together. So you could easily book some of the most uber fun vacations - <%= link_to "read more", about_path %>.
+Sign up for the news and updates </h3>
 
 
 
@@ -158,10 +159,10 @@ You can Sign up for beta invites for more updgraded version.  </h2>
 
 
 
-<h3> Meanwhile - you can still make the booking at the owners website   
+<h3> Meanwhile - you can still make the booking    
 
 <%= link_to(@trip.url) do %>
-  <strong>Owners website</strong>  </h3>
+  <strong>here</strong>  </h3>
 <% end %> 
 
 
@@ -177,15 +178,18 @@ You can Sign up for beta invites for more updgraded version.  </h2>
   
  
  <br></br> 
-<p> *Don't forget to follow for news and updates and leave a feedback - Thanks!* </p>     
-    
-    <div style="float:left;width:100px;margin-left:40px; ">
+
+    <div style="float:left;width:10px;margin-left:0px; ">
+       <%= link_to "Shop", "http://www.facebook.com/pages/Thrill-Engine/199223676806364?sk=app_149715688441437", :class => "shop" %>
+       </div>   
+       
+    <div style="float:left;width:100px;margin-left:100px; ">
        <%= mail_to "feedback@thrillengine.com", "feedback@thrillengine.com" %>
      
     </div>
      
-    <div style="float:left;width:100px; margin-left:90px;">
-           <div class="fb-like" data-href="http://www.facebook.com/pages/Thrill-Engine/199223676806364" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+    <div style="float:left;width:100px; margin-left:70px;">
+           <div class="fb-like" data-href="http://www.facebook.com/pages/Thrill-Engine/199223676806364" data-send="false" data-layout="button_count" data-width="45" data-show-faces="false"></div>
         
     </div>       
         
