@@ -101,7 +101,7 @@ footer nav {
     font: 14px  Arial, sans-serif;
     padding: 15px;
     margin-right: -7px; 
-    margin-top: 2px;
+    margin-top: 3px;
 }
 
 footer nav ul li a {
@@ -136,7 +136,7 @@ div.div-title {
 }
 
 div.div-title h3 {  
-    font: 42px Insolent-Italic;  
+    font: 48px Insolent-Italic;  
 	font-weight: 700; 
 	text-align: center; 
 	color: #fff; 
@@ -578,11 +578,13 @@ a.back_button:hover {
 	
 	margin-top:-18px;
 	margin-left:735px;
+	
 }
 
 .share li {
 	
 	list-style:none;
+	margin-bottom: 5px;
 	
 	
 }
@@ -758,6 +760,7 @@ a.back_button:hover {
 	padding:11px 0px 0px 3px;
 	margin-left: 6px;
 	margin-top: -8px;
+	font-weight: bold;
 	
 	
 }
@@ -769,7 +772,7 @@ a.back_button:hover {
 	border:none;
     width: 300px;	
     margin-top: -14px;
-    margin-right: 245px;
+    margin-right: 175px;
 	float:right;
  
 	
@@ -799,7 +802,7 @@ a.back_button:hover {
 .hellobar .fb-like {
 	
 	top: -22px; 
-	left: 705px;
+	left: 672px;
 	
 }
 
