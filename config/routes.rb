@@ -1,6 +1,8 @@
 N1::Application.routes.draw do
   
 
+  resources :continents
+
   resources :types
 
   resources :searches

@@ -1,33 +1,34 @@
+<div id="tripshowtop">
+ 
+  <%= link_to '<<< Back to Other Listings', trips_path %> 
+
+    <div style="margin-left:710px;margin-top:-20px; ">
+       <% for image in @trip.images.limit(1) %>	
+    
+        
+        <a href="http://pinterest.com/pin/create/button/?media=<%=  image.image.url(:large)  %>&description=<%= @trip.title %> in <%= @trip.location %>" class="pin-it-button" count-layout="none">Pin It</a>
+         <script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script></li>
+        <% end %>
+    </div>
+   
+         <div id="fb-root"></div>
+           <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                  fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));</script>
+                  <div class="fb-like" data-send="true" data-layout="button_count" data-width="10" data-show-faces="false" data-action="recommend" data-font="lucida grande"  ></div> </li>
+         
+   
+
+
+
+</div>
+
 <div class="tripshow">
 
-
-
-
-  <%= link_to '<<< Back', trips_path %> 
-
-<ul class="share">
-<li> <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-like" data-send="true" data-layout="button_count" data-width="20" data-show-faces="false" data-action="recommend" data-font="lucida grande"></div> </li>
-
-<% for image in @trip.images.limit(1) %>	
-<li><a href="http://pinterest.com/pin/create/button/?media=<%=  image.image.url(:large)  %>&description=<%= @trip.title %> in <%= @trip.location %>" class="pin-it-button" count-layout="none">Pin It</a>
-<script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script></li>
-
-<% end %>  
-
-
-
-
-
-
-</ul>
 
   <p id="notice"><%= notice %></p>
    <h1> <%= @trip.title %> </h1>
@@ -55,42 +56,93 @@
     </div> 
   </div>
 
+<div class="tripimg"> 
+
+ <div class="availability"> 
+
+<h3> Reserve online </h3>
+<p> Lowest price starting from: <p>
+
+<h2> <%= @trip.price %> </h2>
+
+ <p> per person/week <p>
+ 
+ <ul>
+  <li> <a href="#" data-reveal-id="myModal" data-animation="fade" class="date_button">  Arriving </a> </li>
+  <li> <a href="#" data-reveal-id="myModal" data-animation="fade" class="date_button">  Leaving </a> </li>
+ </ul> 
+ <br></br>
+
+<a href="#" data-reveal-id="myModal" data-animation="fade" class="reserve_button">  CHECK AVAILABILITY </a>
+
+
+
+
+</div>
+ 
+ 
+ 
   <div class="gallery"> 
     <% for image in @trip.images %>	
 	<%= link_to image_tag(image.image.url(:thumb)), image.image.url(:large), :title => image.title, :rel => "iframe" %>
 	<% end %>   
   </div> 	
-  <br></br>
+  
+
+</div>
+
+<br></br>
+
+<div class="tripinfo">
 
 
+<div class="more">
+
+ <h3>What's More to Know:</h3> 
+ 
+  
+  <ul>
+  <% @trip.details.each do |detail| %> 
+  <li><%=detail.name %> </li>
+  <% end %>
+  </ul>
+
+</div>
+
+
+
+<div class="description">
 
 <h3>Brief Description:</h3>
- <br></br>
+ 
 <p>
  
   <%= @trip.description %>
 </p>	
 	
+</div>	
+	
+
 <h3>Pricing:</h3>
- <br></br> 
  
 <div class="pricing">
+
 
 
 <h4> ACCOMMODATION/PACKAGE </h4>
 <table id="accomodation">
 
 <tr>
+
 <th>Type</th>
-<th>Description</th>
 <th>Price</th>
 </tr> 
 
 <% for accomodation in @trip.accomodations %>
 <tr>
-<td> <%= accomodation.name %> </td>
-<td> <%= accomodation.description %> </td>
-<td>     <%= accomodation.price1 %> </br> <%= accomodation.price2 %> </br> <%= accomodation.price3 %> </td>
+
+<td> <b><%= accomodation.name %> </b> - <%= accomodation.description %> </td>
+<td>   <i>  <%= accomodation.price1 %>  </br> <%= accomodation.price2 %> </br> <%= accomodation.price3 %> </td> </i>
 
 </tr>
 
@@ -108,25 +160,20 @@
 <% for lesson in @trip.lessons %>
 <tr>
 <td> <%= lesson.name %> </td>
-<td> <%= lesson.description %>  </td>
+<td> <i> <%= lesson.description %> </i>  </td>
 </tr>
 <% end %>
 </table>
+
 
 
 </div>
 
 
 
- <br></br>
-<h3>Details:</h3> 
- <br></br>
-  
-  <ul>
-  <% @trip.details.each do |detail| %> 
-  <li><%=detail.name %> </li>
-  <% end %>
-  </ul>
+
+
+
 
 
 
@@ -140,16 +187,16 @@
 
 <a href="#" data-reveal-id="myModal" data-animation="fade" class="book_button">  BOOK IT </a>
 
-</div>
 
 </div>
+
 
 <div id="myModal" class="reveal-modal">
      
 <h1> Hello! Thrill Engine is not fully ready yet. </h1>
 
-<h3> Working hard to put all things together. So you could easily book some of the most uber fun vacations - <%= link_to "read more", about_path %>.
-Sign up for the news and updates </h3>
+<h3> Working hard to put all things together. So you could easily book some of the most uber fun vacations - <%= link_to "read the story here", about_path %>.
+Sign up for an Invite and be one of the first to join. </h3>
 
 
 
@@ -173,7 +220,7 @@ Sign up for the news and updates </h3>
 <h3> Meanwhile - you can still make the booking    
 
 <%= link_to(@trip.url) do %>
-  <strong>here</strong>  </h3>
+  <strong>here</strong>   </h3>
 <% end %> 
 
 

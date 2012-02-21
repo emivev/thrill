@@ -21,14 +21,14 @@
 		left: 50%;
 		margin-left: -300px;
 		width: 520px;
-		 background: url(txt2.jpg);
+		 background: url(vichy.png);
 		position: absolute;
 		z-index: 101;
 		padding: 30px 40px 34px;
 		-moz-border-radius: 1px;
 		-webkit-border-radius: 1px;
 		border-radius: 1px;
-		border: solid 5px #808080;
+		border: solid 5px #fff;
 		
 		}
 		

@@ -16,6 +16,11 @@
   </div>
   
   <div class="field">
+    <%= f.label :continent_id %><br />
+    <%= f.collection_select :continent_id, Continent.all, :id, :name %>
+  </div>
+  
+  <div class="field">
    <% Category.all.each do |category| %>
      <%= check_box_tag "trip[category_ids][]", category.id, @trip.category_ids.include?(category.id) %>
      <%= category.name %>

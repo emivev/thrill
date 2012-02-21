@@ -8,7 +8,7 @@
   <%= favicon_link_tag 'favicon.ico' %>    
   <%= render 'layouts/stylesheets' %>
   <%= javascript_include_tag "application" %>  
-  <%= javascript_include_tag 'jquery-1.4.4.min' %>
+  <%= javascript_include_tag 'jquery-1.4.4.min' %>  
   <%= javascript_include_tag 'jquery.reveal' %>  
   <%= javascript_include_tag 'fancybox/jquery.fancybox-1.3.4.pack' %>
   <%= javascript_include_tag 'fancybox/jquery.easing-1.3.pack' %>
@@ -34,43 +34,7 @@
 
 
 </head>
-  <body>
-  	
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>	
-	
-<div class="hellobar">
-
-<div class="hellobarwrapper">
-<!-- Begin MailChimp Signup Form -->
-
-<p> Hi! Signup and be one of the first to join Thrill Engine </p>
- <div id="mc_embed_signup">
-   
-   
-   <form action="http://thrillengine.us4.list-manage.com/subscribe/post?u=b00a6ce905026bcb1bfd68811&amp;id=ffa803ed98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">	
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address here" required>
-	<div class="clear"><input type="submit" value="Get Invited" name="Get Invited" id="mc-embedded-subscribe" class="news" ></div>  
-   </form>
- </div>
-  
-<!--End mc_embed_signup-->
-
-<div style="top:-23px; left:630px;">
-<div class="fb-like" data-href="http://www.facebook.com/pages/Thrill-Engine/199223676806364" data-send="false" data-layout="button_count" data-width="30" data-show-faces="false" data-font="verdana"></div>
-</div>
-</div>
-
-
-
-</div>	
-	
+  <body>  		
 	<%= render 'layouts/header' %>
 	<div class="container">      	  
 	  <div class="content">  

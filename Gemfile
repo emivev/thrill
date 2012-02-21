@@ -25,7 +25,7 @@ gem 'aws-s3'
 
 group :production do
    # gems specifically for Heroku go here
-   gem 'aws-sdk'
+   
    gem "pg"
 end
 

@@ -1,18 +1,12 @@
 
 
 
-<script type="text/javascript">
-document.write(unescape("%3Cscript src='" + ((document.location.protocol=="https:")?"https://snapabug.appspot.com":"http://www.snapengage.com") + "/snapabug.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">
-SnapABug.addButton("f6ceea2d-c9ef-4743-aae9-290789c914fd","1","500px");
-</script>
-
-
 
 
 
 <script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'68e77bc2-e6d6-4574-964c-79e8a966b15e'});</script>
 <div style="font: 11px Helvetica,Tahoma,Arial;z-index: 980000!important;cursor: pointer;margin-left: -59px;position: fixed;top: 30%;border:0px solid #ddd;color:#fff; font-weight:bold;padding:10px;border-radius:1px; text-shadow: 1px 1px 1px #000; "}
-<span>&nbsp;Share</span><br /><br />
+<span>&nbsp;Share </span><br /><br />
 <span  class='st_facebook_large' ></span><br />
 <span  class='st_twitter_large' ></span><br />
 
@@ -28,7 +22,7 @@ SnapABug.addButton("f6ceea2d-c9ef-4743-aae9-290789c914fd","1","500px");
 
 
 <div class="div-title">
-  <h3><%= link_to "Trips That Will Make You Feel Alive ", about_path %></h3>
+  <h3><%= link_to "Find Trips That Will Make You Feel Alive ", about_path %></h3>
 </div>
 
 <div class="mid">
@@ -38,12 +32,30 @@ SnapABug.addButton("f6ceea2d-c9ef-4743-aae9-290789c914fd","1","500px");
   
         <form class="filter_form">
            <%= form_for @search do |f| %>
-             <%= f.collection_select :categories_id_equals, Category.all, :id, :name, :include_blank => true, :prompt => "Pick a Thrill" %>
-             <%= f.collection_select :location_id_equals, Location.order('country ASC').all, :id, :name, :include_blank => true, :prompt => "Chose a Place" %>
-                
+             <h4> Sports </h4>
+       <ul class="check">     
+        <% f.collection_checks :categories_id_in, Category.all, :id, :name do |check| %>
+         <li> <%= check.box %> <%= check.label %> </li>
+         <% end %>
+      </ul>  
+       
+           
+            
+          <h4> Region </h4>
+       <ul class="check">     
+        <% f.collection_checks :continent_id_in, Continent.all, :id, :name do |check| %>
+         <li> <%= check.box %> <%= check.label %> </li>
+         <% end %>
+      </ul>     
+            
+            <%= f.collection_select :location_id_equals, Location.order('country ASC').all, :id, :name, :include_blank => true, :prompt => "All locations" %> 
+             
            <%= submit_tag "Let's Roll", :class => "find" %>
            <% end %>
         </form>   
+ 
+ 
+ 
  
  
   <% if signed_in? %>   
@@ -108,4 +120,42 @@ SnapABug.addButton("f6ceea2d-c9ef-4743-aae9-290789c914fd","1","500px");
 </div>
 
 </div>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>	
+	
+<div class="hellobar">
+
+<div class="hellobarwrapper">
+<!-- Begin MailChimp Signup Form -->
+
+<p> Hey! Drop Your Email for an Invite, News and Updates </p>
+ <div id="mc_embed_signup">
+   
+   
+   <form action="http://thrillengine.us4.list-manage.com/subscribe/post?u=b00a6ce905026bcb1bfd68811&amp;id=ffa803ed98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">	
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address here" required>
+	<div class="clear"><input type="submit" value="Get Invited" name="Get Invited" id="mc-embedded-subscribe" class="news" ></div>  
+   </form>
+ </div>
+  
+<!--End mc_embed_signup-->
+
+
+
+<div style="top:-23px; left:630px;">
+<div class="fb-like" data-href="http://www.facebook.com/pages/Thrill-Engine/199223676806364" data-send="false" data-layout="button_count" data-width="30" data-show-faces="false" data-font="verdana"></div>
+</div>
+</div>
+
+</div>	
+
 </div>
