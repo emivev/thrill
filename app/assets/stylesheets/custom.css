@@ -997,7 +997,7 @@ a.back_button:hover {
 	border:none;
     width: 270px;	
     margin-top: -13px;
-    margin-right: 195px;
+    margin-right: 165px;
 	float:right;
  
 	
@@ -1025,8 +1025,8 @@ a.back_button:hover {
 
 .hellobar .fb-like {
 	
-	top: -22px; 
-	left: 640px;
+	top: -20px; 
+	left: 625px;
 	
 }
 
@@ -1034,6 +1034,14 @@ a.back_button:hover {
 .check li {
 	list-style:none;
 	color: #808080;
+	
+	
+}
+
+
+.tripdetails {
+	
+	list-style:square; 
 	
 	
 }

@@ -193,35 +193,34 @@
 
 <div id="myModal" class="reveal-modal">
      
-<h1> Hello! Thrill Engine is not fully ready yet. </h1>
-
-<h3> Working hard to put all things together. So you could easily book some of the most uber fun vacations - <%= link_to "read the story here", about_path %>.
-Sign up for an Invite and be one of the first to join. </h3>
-
-
-
-<!-- Begin MailChimp Signup Form -->
-
- <div id="mc_embed_signup">
-   
-   <form action="http://thrillengine.us4.list-manage.com/subscribe/post?u=b00a6ce905026bcb1bfd68811&amp;id=ffa803ed98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+<h1> AWESOME </h1>
 	
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email address here" required>
-	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="listed"></div>  
-   </form>
- </div>
-  
-<!--End mc_embed_signup-->
+<h3>	For Booking Enquiries, Contact Me: </h3>
+
+<%= mail_to "emils.veveris@thrillengine.com", "emils.veveris@thrillengine.com" %>
 
 <br></br>
 
+<h3> And Just Let Me Know: </h3>
+
+<ul>
+	<li>Name of the Place </li>
+	<li>Dates </li>
+	<li>Number of People </li>
+	<li>All the Extras You want (lessons/rentals and etc.) </li>
+	<li>And questions, if you have. </li>
+</ul>	
 
 
-<h3> Meanwhile - you can still make the booking    
+<h3> Cheers, <br></br>  Emils V. </h3>
+ 
 
-<%= link_to(@trip.url) do %>
-  <strong>here</strong>   </h3>
-<% end %> 
+
+
+
+
+
+
 
 
 
@@ -237,16 +236,11 @@ Sign up for an Invite and be one of the first to join. </h3>
  
  <br></br> 
 
-    <div style="float:left;width:10px;margin-left:0px; ">
-       <%= link_to "Shop", "http://www.facebook.com/pages/Thrill-Engine/199223676806364?sk=app_149715688441437", :class => "shop" %>
-       </div>   
+    
        
-    <div style="float:left;width:100px;margin-left:100px; ">
-       <%= mail_to "feedback@thrillengine.com", "feedback@thrillengine.com" %>
+   
      
-    </div>
-     
-    <div style="float:left;width:100px; margin-left:70px;">
+    <div style="float:left;width:100px; margin-left:0px;">
            <div class="fb-like" data-href="http://www.facebook.com/pages/Thrill-Engine/199223676806364" data-send="false" data-layout="button_count" data-width="45" data-show-faces="false"></div>
         
     </div>       
