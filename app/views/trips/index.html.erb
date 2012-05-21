@@ -1,6 +1,35 @@
 
 <div class="div-title">
-  <h3><%= link_to "Find a Place to Stay for Your Action Trips ", about_path %></h3>
+  
+ 
+  <h3> Book Places Where the Action Is </h3>
+
+  <ul>
+  	<li> <h2> Surfing, Kiting, Snowboarding, Skiing and more to come.  </h2> </li>
+  	
+  	
+  	
+  	<li> <h2>  Hotels, Camps, Guest Houses, Rentals, Guiding, Lessons. </h2> </li>
+  	
+  	
+  	
+  	<li><h2> Fair Prices, No Middlemen, No Booking Fees.  </h2> </li>
+  	
+  	
+  	
+  </ul>	
+
+   <div class="search">
+
+ <%= form_for @search do |f| %>
+    
+    <%= f.text_field :categories_name_or_location_name_contains, :placeholder => "Enter destination or activity.... ", :class => "textfield" %><br />
+  <%= submit_tag "Let's Go", :class => "searchb" %>
+ <% end %>
+
+  </div>
+ 
+ 
 </div>
 
 <div class="mid">
@@ -27,8 +56,11 @@
       </ul>     
             
             <%= f.collection_select :location_id_equals, Location.order('country ASC').all, :id, :name, :include_blank => true, :prompt => "All locations" %> 
+           
+          
              
-           <%= submit_tag "Let's Roll", :class => "find" %>
+           
+           <%= submit_tag "Find", :class => "find" %>
            <% end %>
         </form>   
  
@@ -91,49 +123,57 @@
 
 <br></br>
 
-<div class="paginator2">
+    <div class="paginator2">
     
    <%= will_paginate %>
   
-</div>
+    </div>
 
-</div>
-
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>	
-	
-<div class="hellobar">
-
-<div class="hellobarwrapper">
-<!-- Begin MailChimp Signup Form -->
-
-<p> Hey! Sign up and get notified about new trips and updates! </p>
- <div id="mc_embed_signup">
-   
-   
-   <form action="http://thrillengine.us4.list-manage.com/subscribe/post?u=b00a6ce905026bcb1bfd68811&amp;id=ffa803ed98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">	
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="" required>
-	<div class="clear"><input type="submit" value="Submit" name="Submit" id="mc-embedded-subscribe" class="news" ></div>  
-   </form>
  </div>
+
+</div>
+
+<div class="low">
+    
+  <div class="lowabout">
+  	
+  	<h4> Thrill Engine is all about trips that will make you feel alive. 
+  		 
+  		 <%= link_to "The story so far →", about_path %> </h4> 
+
+<br></br>
+
+
+  <a href="https://twitter.com/theThrillEngine" class="twitter-follow-button" data-show-count="false">Follow @theThrillEngine</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   
+  <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FThrill-Engine%2F199223676806364&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
+  
+  
+  </div> 
+  
+  
+  
+  <!-- Begin MailChimp Signup Form -->
+<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{ padding:20px;    float:right; font:18px Helvetica,Arial,sans-serif; color:#000; width:370px; height: 140px;  border-bottom: none; margin-top: -200px; border-left: 1px dotted #D4D4D4; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="http://thrillengine.us4.list-manage.com/subscribe/post?u=b00a6ce905026bcb1bfd68811&amp;id=ffa803ed98" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+	<label for="mce-EMAIL"> Hot Deals. Updates & New Places. Sign Up Today! </label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="your email address" required>
+	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>
+
 <!--End mc_embed_signup-->
-
-
-
-<div style="top:-23px; left:0px;">
-<div class="fb-like" data-href="http://www.facebook.com/pages/Thrill-Engine/199223676806364" data-send="false" data-layout="button_count" data-width="30" data-show-faces="false" data-font="verdana"></div>
-</div>
+  
+  
+  
+  
 </div>
 
-</div>	
 
-</div>
