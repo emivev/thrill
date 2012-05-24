@@ -116,7 +116,9 @@ footer nav ul li a:hover {
 	border-top: 1px solid #fff;
     background:#fff; 
 	height:50px;
-	margin-top: -17px;
+	margin-top: 0px;
+	
+	
 
 border-right-width: 1px;
 border-bottom-width: 1px;
@@ -301,6 +303,8 @@ border-top-color: #D4D4D4;
 border-right-color: #D4D4D4;
 border-bottom-color: #D4D4D4;
 border-left-color: #D4D4D4;
+
+border-bottom: solid 10px #D4D4D4;
     
     
 }
@@ -465,24 +469,18 @@ option {
 
 .low {
 	
-height: 183px;
-background:url(im.png);	
+height: 200px;
+	
+background:url(wt.png); 
 
-border-top: solid 5px #D4D4D4;
 
+box-shadow: inset 0 0 4px rgba(0,0,0,0.05),0 0 9px rgba(0,0,0,0.1);
+
+margin-top:0px;
 
 border-bottom-width: 1px;
 
-border-top-style: solid;
-border-right-style: solid;
-border-bottom-style: solid;
-border-left-style: solid;
-border-top-color: #D4D4D4;
-border-right-color: #000;
-border-bottom-color: #D4D4D4;
-border-left-color: #000;
 
-box-shadow: inset 0 0 4px rgba(0,0,0,0.05),0 0 9px rgba(0,0,0,0.1);
 	
 }
 
@@ -505,7 +503,7 @@ box-shadow: inset 0 0 4px rgba(0,0,0,0.05),0 0 9px rgba(0,0,0,0.1);
 .low h4 {
 	
 	font:22px Helvetica,Arial,sans-serif; 
-	color: #fff;
+	color: #000;
 	font-weight: bold;
 	
 }
@@ -513,7 +511,7 @@ box-shadow: inset 0 0 4px rgba(0,0,0,0.05),0 0 9px rgba(0,0,0,0.1);
 
 #mc_embed_signup {
 	
-background:url(im2.png);
+
 
 		
 }
@@ -521,7 +519,7 @@ background:url(im2.png);
 #mc_embed_signup h4 {
 	
 	font:18px;
-	
+	color: #525252;
 	
 	
 }
