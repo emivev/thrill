@@ -810,7 +810,7 @@ box-shadow: inset 0 0 4px rgba(0,0,0,0.05),0 0 9px rgba(0,0,0,0.1);
 .mbox {	
     display: inline-block;
     text-align:left;
-    font: 24px  Arial, sans-serif;
+    font: 28px  Arial, sans-serif;
     
     
     color: #000; 
@@ -819,7 +819,7 @@ box-shadow: inset 0 0 4px rgba(0,0,0,0.05),0 0 9px rgba(0,0,0,0.1);
     margin-top:20px; 
     margin-right: 40px; 
     border-bottom:double #fff;	
-    font-weight: bold; 
+     
        
 }
 
