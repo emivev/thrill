@@ -16,9 +16,9 @@ class TripsController < ApplicationController
   # GET /trips/1.json
   def show
     @trip = Trip.find(params[:id])
-    @meta_title = " Thrill Engine | #{@trip.categories.map(&:name).to_sentence} | #{@trip.title} | #{@trip.location} "
+    @meta_title = " Thrill Engine - #{@trip.categories.map(&:name).to_sentence} in #{@trip.location} staying at #{@trip.title}  "
     @meta_description = @trip.description
-    @meta_keywords = " @trip.location, #{@trip.categories.map(&:name).to_sentence}, #{@trip.title}, #{@trip.categories.map(&:name).to_sentence} in @trip.location, #{@trip.categories.map(&:name).to_sentence} travel, #{@trip.categories.map(&:name).to_sentence} trips, best #{@trip.categories.map(&:name).to_sentence} spots, top #{@trip.categories.map(&:name).to_sentence} resorts, Adventure Holidays, #{@trip.categories.map(&:name).to_sentence} Holidays, #{@trip.categories.map(&:name).to_sentence} vacations "  
+    @meta_keywords = " #{@trip.location}, #{@trip.categories.map(&:name).to_sentence}, #{@trip.title}, #{@trip.categories.map(&:name).to_sentence} in #{@trip.location}, #{@trip.categories.map(&:name).to_sentence} travel, #{@trip.categories.map(&:name).to_sentence} trips, best #{@trip.categories.map(&:name).to_sentence} spots, top #{@trip.categories.map(&:name).to_sentence} resorts, Adventure Holidays, #{@trip.categories.map(&:name).to_sentence} Holidays, #{@trip.categories.map(&:name).to_sentence} vacations "  
 
     respond_to do |format|
       format.html # show.html.erb

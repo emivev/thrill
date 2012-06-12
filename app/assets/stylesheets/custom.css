@@ -143,7 +143,7 @@ box-shadow: inset 0 0 4px rgba(0,0,0,0.05),0 0 9px rgba(0,0,0,0.1);
 
 .title h3 {  
     
-    font: 38px Helvetica, Arial; 
+    font: 46px Helvetica, Arial; 
 	font-weight: 700; 
 	text-align: center; 
 	color: #292929; 	 
@@ -166,7 +166,7 @@ div.div-title {
 .title  ul {
 	
 	
-	margin-left: 215px;
+	margin-left: 225px;
 	margin-top: -10px;
 	
 	
@@ -807,10 +807,51 @@ box-shadow: inset 0 0 4px rgba(0,0,0,0.05),0 0 9px rgba(0,0,0,0.1);
     
     }
 
+
+.about h1 {
+	
+	text-align:center;
+	margin-top: 20px;
+	font-weight: bold;
+	
+}
+
+
+
+
+
+.packages {
+margin: 50px auto;
+
+padding: 30px 30px;
+}
+
+
+
+.packages2 table {
+	
+border-collapse: collapse;
+margin: 0 auto;
+width: auto;
+border-top: 1px solid #E3C27C;
+	
+}
+
+
+.packages2 table td {
+	
+	font-size: 20px;
+padding: 15px 0;
+border-bottom: 1px solid #E3C27C;
+	
+}
+
+
+
 .mbox {	
     display: inline-block;
     text-align:left;
-    font: 28px  Arial, sans-serif;
+    font: 32px  Arial, sans-serif;
     
     
     color: #000; 
@@ -830,9 +871,8 @@ box-shadow: inset 0 0 4px rgba(0,0,0,0.05),0 0 9px rgba(0,0,0,0.1);
 }
 
 .mbox h3 {	
-   margin-top:50px;	
+   margin-top:18px;	
 }
-
 
 
 .story {
@@ -952,7 +992,20 @@ a.check_button {
    border: none;
    padding: 5px 30px;
    border-radius: 0px;
-   background: #82ff82;
+   background: #fff;
+   background:url(329.jpg) no-repeat center ;
+
+   
+cursor: pointer;
+   
+   
+color: #fff;
+font: bold 16px HelveticaNeue, Helvetica, sans-serif;
+display: block;
+   
+   
+  
+   
    width: 200px;	
    color: #fff;
    font-weight: bold; 	
@@ -960,17 +1013,13 @@ a.check_button {
 	
 }
 
-.find:hover {	
-   background: #91ff91;
-	
-}
 
 .listed {	
    cursor:pointer;
    border: none;
    padding: 5px 30px;
    border-radius: 0px;
-   background: #ff0080;
+   background: #7accff;
    border: #ff0000;
    color: #fff;
    font-weight: bold; 
@@ -983,7 +1032,7 @@ a.check_button {
 
 .listed:hover {
 	
-	background: #0000ff;
+	background: #30baff;
 	color: #fff;
 	text-decoration: none;
 }

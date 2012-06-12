@@ -25,8 +25,10 @@ N1::Application.routes.draw do
   match '/signout', :to => 'sessions#destroy'
   root :to => 'trips#index'
   match '/about',   :to => 'pages#about'
+  match '/pricing',   :to => 'pages#pricing'
   get "pages/home"
   get "pages/about"
+  get "pages/pricing"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

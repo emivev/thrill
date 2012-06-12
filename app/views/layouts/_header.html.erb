@@ -6,7 +6,8 @@
    <nav class="round">
     <ul>      
       
-      <li><%= link_to "The Concept", about_path %>  </li>
+      <li> <%= link_to "The Concept", about_path %>  </li>
+      <li><%= link_to "Want to Get Listed?", pricing_path, :class => "listed" %>  </li>
       <li><%= link_to "Contact", about_path %>  </li>
       
       <% if signed_in? %>
